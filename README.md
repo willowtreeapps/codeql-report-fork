@@ -21,7 +21,7 @@ on:
     - cron: '0 */6 * * *'
 
 jobs:
-  build:
+  run-report:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,6 +29,11 @@ jobs:
       uses: felickz/codeql-report@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload CodeQL Report CSV as Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: "CodeQLReport-${{ github.run_id }}"
+        path: ./*.csv
 ```
 
 In this example, the felickz/codeql-report action is used

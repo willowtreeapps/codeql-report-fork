@@ -15,7 +15,7 @@
     .\action.ps1 -GitHubToken "your_token_here" -GitHubOrganization "your_organization_here"
 
 .NOTES
-    Be careful not to expose your GitHub PAT in your scripts or any public places because it can be used to access your GitHub account.
+    Be careful not to expose your GitHub PAT in your workflow or any public places because it can be used to access your GitHub account.
 
 .LINK
     For more information about GitHub Actions, visit: https://docs.github.com/en/actions.
