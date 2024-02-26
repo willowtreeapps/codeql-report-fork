@@ -13,4 +13,4 @@ jobs:
       - name: Run my GitHub action
         uses: ./
         with:
-          github_pat: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
