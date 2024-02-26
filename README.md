@@ -14,7 +14,7 @@ name: CodeQL Report
 on:
   push:
     paths:
-      - '.github/workflows/codeql-org-report.yml'
+      - '.github/workflows/codeql-report.yml'
   workflow_dispatch:
   #every 6 hours
   schedule:
@@ -28,7 +28,7 @@ jobs:
     - name: Use felickz/codeql-report action
       uses: felickz/codeql-report@v1
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 In this example, the felickz/codeql-report action is used

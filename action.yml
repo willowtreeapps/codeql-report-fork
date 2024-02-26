@@ -10,5 +10,5 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: ${{ github.action_path }}/action.ps1 -GitHubToken ${{ inputs.token }} -GitHubOrganization $${{ inputs.organization }}
+    - run: ${{ github.action_path }}/action.ps1 -GitHubToken ${{ inputs.token }} -GitHubOrganization ${{ inputs.organization }}
       shell: pwsh
